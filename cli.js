@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs');
 const fetch = require('node-fetch');
-const mdlinks = require('./Pruebamd/marker');
+const mdlinks = require('./lib/marker');
 const path = require('path');
 const [,, ...args] = process.argv;
 var proceso = process.cwd();
