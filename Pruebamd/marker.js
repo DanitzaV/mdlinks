@@ -43,7 +43,7 @@ function markdownLinkExtractor(markdown, options) {
       if (options.validate === true) {
         resolve(statusok);
       } else {
-        resolve(links)
+        resolve(links);
       } 
     });
   });
@@ -51,30 +51,3 @@ function markdownLinkExtractor(markdown, options) {
   return promise;
 };
 markdownLinkExtractor('example.md', {validate: true}).then(result => console.log(result));
-
-
-// function markdownLinkExtractorvalidate(markdown) {
-//   let status = {};
-//   const links = [];
-//   const renderer = new Marked.Renderer();
-
-//   const promise = new Promise(function(resolve, reject) {
-  
-//     fs.readFile(markdown, {encoding: 'UTF-8'}, function(err, data) {
-//       if (err) throw err;
-//       renderer.link = function(href, title, text) {
-//         links.push(href);
-//       };
-//       Marked(data, { renderer: renderer });
-      
-//       resolve(links)
-//     });
-    
-//   });
-  
-//   return promise;
-// };
-
-// markdownLinkExtractorvalidate('example.md').then(result => console.log(result)).catch(err => console.log(err));
-
-
