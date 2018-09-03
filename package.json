@@ -4,8 +4,7 @@
   "description": "encuentra links en .md",
   "main": "index.js",
   "bin": {
-    "mdlinks": "./cli.js",
-    "--validate": "./index.js"
+    "mdlinks": "./cli.js"
   },
   "directories": {
     "test": "test"
@@ -16,8 +15,10 @@
   "author": "viviana",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "file-system": "^2.2.2",
     "marked": "^0.5.0",
+    "node-fetch": "^2.2.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
